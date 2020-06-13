@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html><head><title>class work 3.1</title>
+    <meta charset="utf-8">
+    <meta name="author" content="AJay PRAJapati">
+    
+    </head>
+     
+    <style type="text/css">
+        
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        html,body
+        {
+            
+            padding: 0;
+            height: 100%;
+            display: grid;
+            background:#131419;
+        }
+        .container
+        {   padding: 20px;
+            margin-top: 20px;
+            width: 500px;
+            height: 500px;
+            background:#131419;
+            border-radius: 20px 30px;
+            box-shadow:  2px 28px 20px  rgba(44, 44, 43, 0.1),
+               -3px -3px 10px rgba(247, 20, 20, 0.66);
+            color: #8c8c8c;
+            font-family:  cursive,sans-serif;
+            letter-spacing: 1px;
+            font-size: 30px;
+            
+        }
+        
+        table tr td,th
+        {
+            display: flex;
+           
+            padding: 10px;
+            
+            
+        }
+        
+       .container input {
+           padding: 15px;
+            background: #131419;
+           outline: none;
+            width: 70%;
+            color: aliceblue;
+            border: none;
+            padding-left: 15px;
+            height: 100%;
+            font-size: 25px;
+            font-family: cursive;
+            border-radius: 25px;
+            box-shadow:inset  2px 2px 5px  rgba(44, 44, 43, 0.1),
+              inset -3px -3px 7px rgba(250, 0, 0, 0.32);
+               ;
+            
+        }
+        #btn
+        {   width: 200px;
+            height: 40px;
+            background: #131419;
+            border-radius: 20px;
+            border-style: none;
+            padding: 10px;
+            color: #8c8c8c;
+            letter-spacing: 1px;
+            font-size: 15px;
+            font-family: cursive;
+            
+             box-shadow:     2px 28px 20px  rgba(44, 44, 43, 0.1),
+               -3px -3px 10px rgba(250, 0, 0, 0.32);
+                
+        }
+        #btn:focus
+        {
+            box-shadow:  inset   2px 28px 20px  rgba(44, 44, 43, 0.1),
+                inset
+               -3px -3px 10px rgba(250, 0, 0, 0.32);
+        }
+        #f
+        {
+            padding: 20px;
+            margin-top:  50px;
+            border-radius: 15PX;
+            color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+             box-shadow:  inset   2px 28px 20px  rgba(44, 44, 43, 0.1),
+                inset
+               -3px -3px 10px rgba(250, 0, 0, 0.32);
+            
+        }
+        #btn:hover
+        {
+              box-shadow: inset   2px 28px 20px  rgba(44, 44, 43, 0.1),
+                 
+           inset    -3px -3px 10px rgba(250, 0, 0, 0.32);
+        }
+        }
+         
+        
+        
+        
+    </style>
+<body>
+    <div class="container">
+      
+          <table border="0">
+          <tr><th>working with data type Using JavaScript</th></tr>
+              <tr><td><input type="text" name="t1" id="t1" placeholder="Enter first value"></td></tr>
+              <tr><td><input type="text" name="t2" id="t2" placeholder="Enter second value"></td></tr>
+              <tr><td> <button id="btn" onclick="f1()">Click</button> </td></tr>
+          </table>
+          <div id="f"><p id="res"></p></div>
+        </div>
+    
+    </body>
+    <script type="text/javascript">
+       function f1()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById ("t2").value;
+            
+            
+            var result; 
+            
+             
+            
+            if(!a)
+                {
+                    alert("first value cannot be empty!");
+                     result = " ";
+                    document.getElementById("t1").focus();
+                }
+            else if(!b)
+                {
+                    alert("Second value cannot be empty!");
+                     result = " ";
+                    document.getElementById("t2").focus();
+                }
+            else if(!isNaN(a) && !isNaN(b))
+                {
+                    result = +a + +b;
+                }
+            else if(!isNaN(a) && isNaN(b))
+                {
+                    alert("Error! incompatible type",a,b);
+                    result = " ";
+                }
+            else if(isNaN(a) && !isNaN(b))
+                {
+                    alert("Error! incompatible type",a,b);
+                    result = " ";
+                  
+                }
+            else if(isNaN(a) && isNaN(b))
+                {
+                    result = a +" "+ b;
+                  
+                }
+            
+            document.getElementById("res").innerHTML = "Result : " + result;
+             
+        }
+    </script>
+     
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

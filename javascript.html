@@ -1,0 +1,46 @@
+   function f1()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById ("t2").value;
+            
+            
+            var result; 
+            
+             
+            
+            if(!a)
+                {
+                    alert("first value cannot be empty!");
+                     result = " ";
+                    document.getElementById("t1").focus();
+                }
+            else if(!b)
+                {
+                    alert("Second value cannot be empty!");
+                     result = " ";
+                    document.getElementById("t2").focus();
+                }
+            else if(!isNaN(a) && !isNaN(b))
+                {
+                    result = +a + +b;
+                }
+            else if(!isNaN(a) && isNaN(b))
+                {
+                    alert("Error! incompatible type",a,b);
+                    result = " ";
+                }
+            else if(isNaN(a) && !isNaN(b))
+                {
+                    alert("Error! incompatible type",a,b);
+                    result = " ";
+                  
+                }
+            else if(isNaN(a) && isNaN(b))
+                {
+                    result = a +" "+ b;
+                  
+                }
+            
+            document.getElementById("res").innerHTML = "Result : " + result;
+             
+        }

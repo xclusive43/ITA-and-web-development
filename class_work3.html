@@ -1,0 +1,111 @@
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="AJAY PRAJAPATI">
+<title>second largest number</title>
+<style type="text/css">
+
+input[type=button] {
+	  background-color: rgba(206, 63, 101, 0.91);
+	  color: white;
+	  padding: 12px 20px;
+      box-shadow: 10px 10px #363535;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+      border-radius: 20px;
+	  display: inline-flex;
+}
+
+input[type=button]:hover {
+  	background-color: #1d1919;
+}
+
+body{
+  font-family: sans-serif;
+  text-align: center;
+    background: #c1c1c0;
+}
+
+h1{
+    font-family: sans-serif;
+      box-shadow: 10px 10px #363535;
+    text-align: center;
+}
+
+h2{
+ 	text-align: center;
+    font-family: sans-serif;
+}
+
+</style>
+    
+    
+<script type="text/javascript">
+    
+var num = 0;
+var number = 0;
+var ele = 0;
+var pos = 0;
+var numarray= new Array();
+
+function array_size()
+{
+	num=prompt("Enter the size of array:");
+	number=parseInt(num);
+	get_numbers();
+}
+
+function get_numbers()
+{
+	if (number!=null && number!="")
+	{
+		for(var i=0;i<number;i++)
+		{
+			n=prompt("Enter the  "+(i+1)+"  elements:");
+			numarray[i]=parseInt(n);
+		}
+	}
+	searching();
+}
+
+
+function searching()
+{
+	var first; var second;
+	first = second = numarray[0];
+
+	for (var i = 0; i<number; i++) {
+		if(numarray[i]>first)
+		{
+			second=first;
+			first=numarray[i];
+		}
+		else if(numarray[i]>second && numarray[i]!= first)
+			second = numarray[i];
+	}
+	if(second == numarray[0])
+	{
+		document.writeln("<h1>No second largest element found.</h1>");
+	}
+	else
+	{
+		document.writeln("<h1>Second largest element is:</h1>"+second);
+	}
+	
+}
+
+
+</script>
+</head>
+<body>
+	<h1>Second largest element in an Array!</h1>
+	<h4>Click the button and enter the size and elements of the array.</h4>
+	<input type="button" onclick="array_size()" value="click here" />
+    
+     
+	
+</body>
+     
+</html>
