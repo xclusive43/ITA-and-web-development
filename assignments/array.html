@@ -1,0 +1,60 @@
+<html>
+    <meta name="author" content="Ajay Prajapati">
+    <meta charset="utf-8">
+<head>
+<script type="text/javascript">
+var num=0;
+number=0;
+var numarray=new Array();
+    
+function array_size()
+{
+num=prompt("Enter the size of array");
+number=parseInt(num);
+get_numbers();
+}
+function get_numbers()
+{
+if (number!=null && number!="")
+{
+for( i=0;i<number;i++)
+{
+n=prompt("Enter the "+num+" to be sorted");
+numarray[i]=parseInt(n);
+}
+}
+sorting();
+search();
+}
+function sorting()
+{
+document.writeln("<h1>Sorted Array<h1>");
+document.writeln(numarray.sort(sortNumber));
+}
+function sortNumber(a,b )
+{
+return a-b;
+}
+    function search()
+    {    var j =0;
+       j= prompt("enter the element to be searched : ");
+       parseInt(j);
+       document.writeln(j);
+     
+     for( i =0; i<number;i++)
+         {
+             if(numarray[i]==j)
+                 {   
+                     i=i+1;
+                     document.writeln(j+"found at position"+i);
+                 }
+             
+         }
+    }
+</script>
+</head>
+<body>
+<h1> Click the button and enter the numbers to be sorted</h1>
+<input type="button" onclick="array_size()" value="click here" />
+</body>
+</html>

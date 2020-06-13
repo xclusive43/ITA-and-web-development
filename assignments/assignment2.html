@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Tradition//EN""http://www.w3.org/TR/xhtml1-transtional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ajay Prajapati">
+
+	<title>assignment</title>
+	<script type="text/javascript">
+
+	  function report()
+	  {
+          
+          
+          var name = document.getElementById('name').value;
+          var m1 = document.getElementById('softwareengineering').value;
+          var m2 = document.getElementById('oracle').value;
+          var m3 = document.getElementById('computernetwork').value;
+          var m4 = document.getElementById('ita').value;
+          var m5 = document.getElementById('ai').value;
+          
+           
+
+          var total1 = document.getElementById('tot');
+          var averagemarks = document.getElementById('avg');
+          var name1 = document.getElementById('na');
+          var res1 = document.getElementById('res');
+          var grd1 = document.getElementById('grd');
+          
+          name1.innerHTML = name;
+
+          var tottalmarks = +m1+ +m2+ +m3+ +m4+ +m5;
+
+          total1.innerHTML = tottalmarks;
+          
+          //alert(total1);
+           
+          var average = tottalmarks / 5;
+          //average
+           averagemarks.innerHTML = average;
+
+     	  //grade
+          var grade; 
+          var graderesult;
+          
+          if( m1 < 30 | m2<30 | m3<30 | m4<30 | m5<30)
+              {
+                  grade = "D";
+                   graderesult = "Fails";
+              }
+          
+            else{
+                 if( average >= 75)
+           {
+
+           	     grade = "A+";
+           	     graderesult = "Pass";
+           }
+			else if(average >= 60 & average < 75)
+           {
+                grade = "A";
+                graderesult = "Pass";
+           }
+           else if(average >= 50 & average < 60)
+           {
+           		grade = "B";
+           		graderesult = "Pass";
+           }
+
+           else if (average >= 30 & average <50)
+           {
+           	    grade = "C";
+           	    graderesult = "Pass";
+           }
+
+           else if(average < 30)
+           {
+              grade = "D";
+              graderesult = "Fails";
+           }
+
+
+           res1.innerHTML= graderesult;
+           grd1.innerHTML = grade;
+                
+            }
+           	
+          
+
+	  }
+         
+
+
+</script>
+<style type="text/css">
+	body
+	{
+		background: orange;
+	}
+	.form1
+	{
+		background: lightblue;
+		align-items: center;
+		width: 40%;
+		padding: 20px;
+		font-family: sans-serif;
+		font-weight: bold;
+
+	}
+	.form2
+	{
+		 
+		font-family: sans-serif;
+		margin-top: -350px;
+		margin-left: 550px;
+		width: 30%;
+		padding: 20px;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+<div class="form1">
+	<h2>Department of Computer Application</h2>
+	<form action="#">
+		<table border="2" style="padding: 10px; ">
+			<tr><th colspan="2">Student Progressive report</th></tr>
+			<tr><td>Name</td><td><input   type="text"  value=""   required  id="name" ></td></tr>
+			<tr><th colspan="2">Enter your Marks</th></tr>
+
+			<tr><td>Software Engineering</td><td><input type="number"   required id="softwareengineering"></td></tr>
+			<tr><td>Oracle</td><td><input type="number" name="" id="oracle"></td></tr>
+
+			<tr><td>Computer Network-II</td><td><input type="number"  required id="computernetwork"></td></tr>
+
+			<tr><td>Internet Technology and Application</td><td><input type="number"   required id="ita"></td></tr>
+			<tr><td>Artificial Intelligence</td><td><input type="number"   required id="ai"></td></tr>
+
+			<tr><td colspan="2"><button onclick="report()" style="margin-left: 80%; border-radius: 25px; background: red; font-weight: bold; color: #fff;">submit</button></td> </tr>
+		</table>
+
+	</form>
+	
+</div>
+
+<div class="form2">
+	<table border="2" style="padding: 10px; background: lightgreen;">
+		<tr><th colspan="2">Result</th></tr>
+		<tr><td>Name</td><td><p id="na"></p></td></tr>
+		<tr><td>Total Mark</td><td><p id="tot"></p></td></tr>
+		<tr><td>Average Mark</td><td><p id="avg"></p></td></tr> 
+		<tr><td>Result</td><td><p id="res"></p></td></tr>
+		<tr><td>Grade</td><td><p id="grd"></p></td></tr>
+	</table>
+</div>
+</body>
+
+</html>
